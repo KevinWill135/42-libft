@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 19:25:25 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:49:13 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, start, end - start + 1));
 }
+/* 
+#include <stdio.h>
 
-// int		start;
-// 	int		end;
+int main(void)
+{
+	char *str = "blablaLets see what this do LOL!!!";
+	char *set = "blaLO!";
+	char *trimmed = ft_strtrim(str, set);
 
-// 	start = 0;
-// 	end = ft_strlen(s1);
-// 	while (s1[start] && ft_strchr(set, (int)s1[start]))
-// 		start++;
-// 	while (end > start && ft_strchr(set, (int)s1[end - 1]))
-// 		end--;
-// 	return (ft_substr(s1, start, end - start));
+	printf("test: %s\n", trimmed);
+
+	free(trimmed);
+} */

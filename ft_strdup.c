@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 21:10:55 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:28:18 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,21 @@ char	*ft_strdup(const char *s1)
 
 	str = malloc(ft_strlen(s1) + 1);
 	if (!str)
-		return (0);
+		return (NULL);
 	return (ft_strcpy(str, s1));
 }
+/* 
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char *str = "Copy me to anyone destiny please!!";
+	char *ori = strdup(str);
+	char *cpy = ft_strdup(str);
+
+	printf("ori: %s\ncpy: %s\n", ori, cpy);
+
+	free(ori);
+	free(cpy);
+} */

@@ -6,7 +6,7 @@
 #    By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 21:11:34 by kde-paul          #+#    #+#              #
-#    Updated: 2025/10/22 21:31:49 by kde-paul         ###   ########.fr        #
+#    Updated: 2025/10/29 17:35:22 by kde-paul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $@ $<
+	ar rcs $@ $^
 	ranlib $(NAME)
 
 bonus: $(OBJS) $(BONUS_OBJS)

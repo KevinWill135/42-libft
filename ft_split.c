@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 14:07:27 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:59:21 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,3 +85,20 @@ char	**ft_split(char *str, char c)
 	arr[j] = NULL;
 	return (arr);
 }
+/* 
+#include <stdio.h>
+
+int main(void)
+{
+	char *str = "Are you sure that u need to split me?!";
+	char c = ' ';
+	char **arr = ft_split(str, c);
+	int i = 0;
+
+	printf("\nTESTING\n\n");
+	while (arr[i])
+	{
+		printf("%s\n", arr[i]);
+		free(arr[i++]);
+	}
+} */

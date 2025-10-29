@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 14:22:51 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/10/29 22:06:18 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,16 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+/* 
+#include <stdio.h>
+#include <limits.h>
+
+int main(void)
+{
+	long n = LONG_MAX;
+	char *str = ft_itoa(n);
+
+	printf("test: %s\n", str);
+
+	free(str);
+} */

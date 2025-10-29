@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 22:19:16 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:40:05 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	i;
-	size_t	size_s;
+	size_t	slen;
 
 	i = 0;
-	size_s = ft_strlen(s);
+	slen = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	if (start >= size_s)
+	if (start >= slen)
 	{
 		substr = malloc(1);
 		if (!substr)
@@ -30,8 +30,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		substr[0] = '\0';
 		return (substr);
 	}
-	if (len > (size_s - start))
-		len = size_s - start;
+	if (len > (slen - start))
+		len = slen - start;
 	substr = malloc(len + 1);
 	if (!substr)
 		return (NULL);
@@ -40,3 +40,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
+/* 
+#include <stdio.h>
+
+int main(void)
+{
+	char *str = "Let me see what u can do ;)";
+	char *sub = ft_substr(str, 3, 0);
+
+	printf("test: %s\n", sub);
+
+	free(sub);
+} */

@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 22:00:05 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:44:42 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(str, s2, len);
 	return (str);
 }
+/* 
+#include <stdio.h>
+
+int main(void)
+{
+	char *str1 = "come on, lets ";
+	char *str2 = "change the world";
+	char *joined = ft_strjoin(str1, str2);
+
+	printf("test: %s\n", joined);
+
+	free(joined);
+} */
