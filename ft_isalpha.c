@@ -6,11 +6,13 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 15:48:54 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/09/01 15:50:17 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 19:32:14 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(unsigned char c)
+#include <libft.h>
+
+int	ft_isalpha(int c)
 {
 	if ((c > 64 && c < 91) || (c > 96 && c < 123))
 		return (1);

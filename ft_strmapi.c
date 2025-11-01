@@ -6,12 +6,22 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:01:09 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/30 20:06:39 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:54:14 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/**
+ * @brief Creates a new modified string
+ * 
+ * Applies the function f to each character of the string s.
+ * 
+ * @param s The string to iterate over.
+ * @param f The function to apply to each character.
+ * @return The string created from the successive applications of ’f’.
+ * Returns NULL if the allocation fails.
+*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;

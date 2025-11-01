@@ -6,7 +6,7 @@
 #    By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 21:11:34 by kde-paul          #+#    #+#              #
-#    Updated: 2025/10/29 17:35:22 by kde-paul         ###   ########.fr        #
+#    Updated: 2025/11/01 19:00:58 by kde-paul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ ft_memcpy.c ft_memcmp.c ft_memmove.c ft_strnstr.c ft_strlcpy.c ft_strlcat.c ft_a
 PART2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-BONUS_PART = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BONUS_PART = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 SRC = $(PART1) $(PART2)
 

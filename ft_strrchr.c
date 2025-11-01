@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:35:06 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:31:23 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 19:03:20 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	if (!s)
-		return (NULL);
 	i = ft_strlen(s);
 	while (i >= 0)
 	{

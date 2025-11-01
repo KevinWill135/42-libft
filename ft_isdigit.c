@@ -6,11 +6,11 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 15:42:23 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/09/01 15:56:26 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 19:08:04 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(unsigned char c)
+int	ft_isdigit(int c)
 {
 	if (c > 47 && c < 58)
 		return (1);

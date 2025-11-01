@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 14:22:51 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/29 22:06:18 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:53:37 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,14 @@ static int	ft_nbrlen(long nb)
 	count++;
 	return (count);
 }
-
+/**
+ * @brief Converts a number in a string.
+ * 
+ * It'll convert the number in a string and handle negative numbers.
+ * 
+ * @param n The integer to convert.
+ * @return This function return the new string.
+*/
 char	*ft_itoa(int n)
 {
 	char	*str;

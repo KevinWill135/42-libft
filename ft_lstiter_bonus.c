@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 12:51:38 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/09/29 13:16:34 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/01 17:25:40 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_lstsize(t_list *lst)
+/**
+ * @brief
+ * 
+ * Iterates through the list ’lst’ and applies the function ’f’ to the content of each node.
+ * 
+ * @param lst The address of a pointer to a node.
+ * @param f The address of the function to apply to each node’s content.
+ * @return none
+*/
+void	ft_lstiter(t_list *lst, void (f)(void *))
 {
-	int	i;
-
-	i = 0;
 	while (lst)
 	{
+		f(lst->content);
 		lst = lst->next;
-		i++;
 	}
-	return (i);
 }

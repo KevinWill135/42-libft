@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 19:21:23 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/29 20:40:25 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 18:25:10 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(void)
 	char *str2 = "Come oN, one more test LOL!!";
 	size_t n = 10;
 
-	/* int	*s1 = {1, 2, 3, 4, 5};
+	int	*s1 = {1, 2, 3, 4, 5};
 	int	*s2 = {1, 2, 3, 4, 5};
 
 	printf("ori: %d\ncpy: %d\n", memcmp(str1, str2, n), ft_memcmp(str1, str2, n));

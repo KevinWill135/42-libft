@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 18:48:46 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/29 20:45:54 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 19:16:47 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return ((void *)pdst);
 }
-
+/* 
 #include <stdio.h>
 #include <string.h>
 
@@ -47,4 +47,4 @@ int main(void)
 	size_t n = 20;
 
 	printf("ori: %s\ncpy: %s\n", (char *)memmove(dst, src, n), (char *)ft_memmove(dst, src, n));
-}
+} */

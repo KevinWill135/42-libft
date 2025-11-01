@@ -6,12 +6,21 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 22:00:05 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/29 21:44:42 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:54:10 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/**
+ * @brief It'll join two strings
+ * 
+ * This function join two strings in a new string
+ * 
+ * @param s1 The prefix string.
+ * @param s2 The suffix string.
+ * @return Returns a new string that was joined two old string.
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;

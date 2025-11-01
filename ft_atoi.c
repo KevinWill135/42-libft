@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 19:15:55 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/22 21:20:35 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:53:05 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
  * @return 
  * The number that was converted
  */
-
 int	ft_atoi(const char *str)
 {
 	int	i;

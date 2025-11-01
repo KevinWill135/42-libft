@@ -6,12 +6,21 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 16:51:05 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/30 20:21:22 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:54:05 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/**
+ * @brief Modifies the each string's character
+ * 
+ * Applies the function f to each character of the string s.
+ * 
+ * @param s The string to iterate over.
+ * @param f The function to apply to each character.
+ * @return None.
+*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
@@ -25,25 +34,26 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
+/* 
 #include <stdio.h>
 
 void	ft_changecase(unsigned int i, char *s)
 {
-	printf("char: %c\n", s[i]);
-	if (ft_isalpha(s[i]))
+	(void)i;
+
+	if (ft_isalpha(*s))
 	{
-		if (s[i] > 64 && s[i] < 91)
-			s[i] += 32;
+		if (*s > 64 && *s < 91)
+			*s += 32;
 		else
-			s[i] -= 32;
+			*s -= 32;
 	}
 }
 
 int main(void)
 {
-	char str[13] = "You can do it";
+	char str[] = "ShOW me what you can do";
 	ft_striteri(str, ft_changecase);
 
 	printf("test: %s\n", str);
-}
+} */

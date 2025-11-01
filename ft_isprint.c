@@ -6,11 +6,11 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:03:08 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/09/02 23:25:44 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/01 19:08:09 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(unsigned char c)
+int	ft_isprint(int c)
 {
 	if (c > 31 && c < 127)
 		return (1);
