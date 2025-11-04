@@ -6,7 +6,7 @@
 #    By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 21:11:34 by kde-paul          #+#    #+#              #
-#    Updated: 2025/11/04 14:02:49 by kde-paul         ###   ########.fr        #
+#    Updated: 2025/11/04 20:59:19 by kde-paul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC = $(PART1) $(PART2)
 
 OBJS = $(SRC:.c=.o)
 BONUS_OBJS = $(BONUS_PART:.c=.o)
+BONUS_DONE = .bonus_done
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -35,17 +36,19 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $@ $^
-	ranlib $(NAME)
+	@ar rcs $@ $^
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(BONUS_DONE)
+
+$(BONUS_DONE): $(BONUS_OBJS)
+	touch $(BONUS_DONE)
+	@ar rcs $(NAME) $^
 
 %.o: %.c
 	@$(CC) -I. $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS) $(BONUS_DONE)
 
 fclean: clean
 	$(RM) $(NAME)
