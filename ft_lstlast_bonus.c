@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 12:53:07 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:21:11 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:14:55 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * @param lst The beginning of the list.
  * @return The last node of the list.
  */
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
@@ -29,7 +29,7 @@ t_list *ft_lstlast(t_list *lst)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	t_list *n1 = ft_lstnew("first");
 	t_list *n2 = ft_lstnew("second");

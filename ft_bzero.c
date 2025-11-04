@@ -6,13 +6,13 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:19:16 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 14:41:47 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:13:37 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

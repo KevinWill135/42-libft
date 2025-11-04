@@ -6,13 +6,13 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:57:15 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 15:36:16 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:13:51 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || (c > 96 && c < 123))
 		return (1);

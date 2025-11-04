@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:04:41 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:21:02 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:43:49 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @param del The address of the function used to delete the content.
  * @return none
  */
-void ft_lstdelone(t_list *lst, void(del)(void *))
+void	ft_lstdelone(t_list *lst, void (del)(void *))
 {
 	if (lst && del)
 	{

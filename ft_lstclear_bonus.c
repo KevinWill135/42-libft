@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:08:11 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:20:55 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:43:03 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,18 @@
 /**
  * @brief Deletes and frees the given node.
  *
- * This function deletes and frees any given node and all its successors, using the function 'del'.
+ * This function deletes and frees any given node and all its successors,
+ * using the function 'del'.
  *
  * @param lst The address of a pointer to a node.
- * @param del The address of the function used to delete the content of the node.
+ * @param del The address of the function used to delete
+ * the content of the node.
  * @return none
  */
-void ft_lstclear(t_list **lst, void(del)(void *))
+void	ft_lstclear(t_list **lst, void (del)(void *))
 {
-	t_list *curr;
-	t_list *next;
+	t_list	*curr;
+	t_list	*next;
 
 	if (lst && del)
 	{

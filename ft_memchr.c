@@ -6,16 +6,16 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:52:57 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:21:34 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:15:47 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
-	const unsigned char *b;
+	size_t				i;
+	const unsigned char	*b;
 
 	i = 0;
 	b = s;
@@ -32,11 +32,12 @@ void *ft_memchr(const void *s, int c, size_t n)
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
 	char str[10] = "testing";
 	int c = 'g';
 	size_t n = 6;
 
-	printf("ori: %s\ncpy: %s\n", (char *)memchr(str, c, n), (char *)ft_memchr(str, c, n));
+	printf("ori: %s\ncpy: %s\n", (char *)memchr(str, c, n),
+		(char *)ft_memchr(str, c, n));
 } */

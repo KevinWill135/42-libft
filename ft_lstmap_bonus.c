@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 23:03:47 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:21:15 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:39:21 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@
  *
  * @param lst The address of a pointer to a node.
  * @param f The address of the function applied to each node’s content.
- * @param del The address of the function used to delete a node’s content if needed.
+ * @param del The address of the function 
+ * used to delete a node’s content if needed.
  * @return The new list. NULL if the allocation fails.
  */
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *newls;
-	t_list *tmp;
+	t_list	*newls;
+	t_list	*tmp;
 
 	newls = NULL;
 	if (!lst)
@@ -50,10 +51,10 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 /*
 #include <stdio.h>
 
-void *touppercase(void *cont)
+void	*touppercase(void *cont)
 {
-	char *s;
-	int i;
+	char	*s;
+	int		i;
 
 	s = ft_strdup(cont);
 	i = -1;
@@ -62,30 +63,32 @@ void *touppercase(void *cont)
 	return (s);
 }
 
-void delete(void *lst)
+void	delete(void *lst)
 {
 	free(lst);
 }
 
-int main(void)
+int	main(void)
 {
-	t_list *one = ft_lstnew(ft_strdup("blablabla"));
-	t_list *two = ft_lstnew(ft_strdup("testing"));
-	t_list *three = ft_lstnew(ft_strdup("your self"));
+	t_list	*one;
+	t_list	*two;
+	t_list	*three;
+	t_list	*tmp;
+	t_list	*new;
 
+	one = ft_lstnew(ft_strdup("blablabla"));
+	two = ft_lstnew(ft_strdup("testing"));
+	three = ft_lstnew(ft_strdup("your self"));
 	ft_lstadd_back(&one, two);
 	ft_lstadd_back(&two, three);
-
-	t_list *tmp = one;
-
+	tmp = one;
 	printf("First list\n");
 	while (one)
 	{
 		printf("%s ", (char *)one->content);
 		one = one->next;
 	}
-
-	t_list *new = ft_lstmap(tmp, touppercase, delete);
+	new = ft_lstmap(tmp, touppercase, delete);
 	printf("\nNew list\n");
 	while (new)
 	{
@@ -93,7 +96,6 @@ int main(void)
 		new = new->next;
 	}
 	printf("\n");
-
 	ft_lstclear(&one, delete);
 	ft_lstclear(&new, delete);
 }

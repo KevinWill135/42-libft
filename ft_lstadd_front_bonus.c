@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 16:49:45 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:20:50 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:14:33 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @param new The address of a pointer to the node to be added.
  * @return none
  */
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;
@@ -29,7 +29,7 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	int one_1 = 1;
 	int two_2 = 2;

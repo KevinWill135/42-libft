@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
-	unsigned char *pdst;
-	unsigned char *psrc;
+	size_t			i;
+	unsigned char	*pdst;
+	unsigned char	*psrc;
 
 	i = 0;
 	pdst = (unsigned char *)dst;
@@ -40,11 +40,12 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
 	char dst[15];
 	char *src = "Please, make me do something cool!!";
 	size_t n = 20;
 
-	printf("ori: %s\ncpy: %s\n", (char *)memmove(dst, src, n), (char *)ft_memmove(dst, src, n));
+	printf("ori: %s\ncpy: %s\n", (char *)memmove(dst, src, n),
+		(char *)ft_memmove(dst, src, n));
 } */

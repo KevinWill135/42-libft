@@ -21,12 +21,12 @@
  * @param f The function to apply to each character.
  * @return None.
  */
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	if (!s || !f)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -40,7 +40,6 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *))
 void	ft_changecase(unsigned int i, char *s)
 {
 	(void)i;
-
 	if (ft_isalpha(*s))
 	{
 		if (*s > 64 && *s < 91)
@@ -50,7 +49,7 @@ void	ft_changecase(unsigned int i, char *s)
 	}
 }
 
-int main(void)
+int	main(void)
 {
 	char str[] = "ShOW me what you can do";
 	ft_striteri(str, ft_changecase);

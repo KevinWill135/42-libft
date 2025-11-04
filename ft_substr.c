@@ -22,11 +22,11 @@
  * @param len The maximum length of the substring.
  * @return It'll return the substring
  */
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
-	size_t i;
-	size_t slen;
+	char	*substr;
+	size_t	i;
+	size_t	slen;
 
 	i = 0;
 	slen = ft_strlen(s);
@@ -53,7 +53,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	char *str = "Let me see what u can do ;)";
 	char *sub = ft_substr(str, 3, 0);

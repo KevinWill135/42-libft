@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 12:51:38 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:21:27 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:15:07 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
  * @param lst The beginning of the list
  * @return Returns the list size
  */
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst)
@@ -33,7 +33,7 @@ int ft_lstsize(t_list *lst)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	t_list *one = ft_lstnew("bla");
 	t_list *two = ft_lstnew("ble");

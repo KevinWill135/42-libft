@@ -6,13 +6,13 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:03:08 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 15:36:34 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:14:06 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c > 31 && c < 127)
 		return (1);

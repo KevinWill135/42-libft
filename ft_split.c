@@ -6,23 +6,16 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 14:07:27 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:44:48 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:44:58 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-typedef struct s_ints
+static int	count_words(char const *str, char charset)
 {
-	int i;
-	int j;
-	int start;
-} t_ints;
-
-static int count_words(char const *str, char charset)
-{
-	int i;
-	int counter;
+	int	i;
+	int	counter;
 
 	i = 0;
 	counter = 0;
@@ -38,10 +31,10 @@ static int count_words(char const *str, char charset)
 	return (counter);
 }
 
-static char *make_str(char const *str, int start, int end)
+static char	*make_str(char const *str, int start, int end)
 {
-	int i;
-	char *newstr;
+	int		i;
+	char	*newstr;
 
 	newstr = malloc((end - start) + 1);
 	if (!newstr)
@@ -57,15 +50,16 @@ static char *make_str(char const *str, int start, int end)
 	return (newstr);
 }
 
-static void frees_str(char **str)
+static void	frees_str(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
 		free(str[i++]);
 	free(str);
 }
+
 /**
  * @brief Splits strings
  *
@@ -75,10 +69,10 @@ static void frees_str(char **str)
  * @param c The delimiter character.
  * @return It'll the new array with splitted string.
  */
-char **ft_split(char const *str, char c)
+char	**ft_split(char const *str, char c)
 {
-	char **arr;
-	t_ints counters;
+	char	**arr;
+	t_ints	counters;
 
 	if (!str)
 		return (NULL);
@@ -103,16 +97,20 @@ char **ft_split(char const *str, char c)
 	}
 	return (arr);
 }
-
+/* 
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	char const *str = NULL;
-	char c = ' ';
-	char **arr = ft_split(str, c);
-	int i = 0;
+	char const	*str;
+	char		c;
+	char		**arr;
+	int			i;
 
+	str = NULL;
+	c = ' ';
+	arr = ft_split(str, c);
+	i = 0;
 	printf("\nTESTING\n\n");
 	while (arr[i])
 	{
@@ -121,3 +119,4 @@ int main(void)
 	}
 	free(arr);
 }
+ */

@@ -6,15 +6,15 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:15:34 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:21:47 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:16:20 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!src && !dst)
@@ -30,7 +30,7 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
 	// char dst[20];
 	char dst1[20];
@@ -38,5 +38,5 @@ int main(void)
 	size_t n = 20;
 
 	printf("ori: %s\ncpy: %s\n", (char *)memcpy(dst1, src, n),
-		   (char *)ft_memcpy(dst1, src, n));
+			(char *)ft_memcpy(dst1, src, n));
 }*/

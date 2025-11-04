@@ -21,10 +21,10 @@
  * @param s2 The suffix string.
  * @return Returns a new string that was joined two old string.
  */
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	int len;
+	char	*str;
+	int		len;
 
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = (char *)malloc(len);
@@ -37,7 +37,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	char *str1 = "come on, lets ";
 	char *str2 = "change the world";

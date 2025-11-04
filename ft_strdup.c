@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-static char *ft_strcpy(char *dst, const char *src)
+static char	*ft_strcpy(char *dst, const char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i])
@@ -26,9 +26,9 @@ static char *ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	char *str;
+	char	*str;
 
 	str = malloc(ft_strlen(s1) + 1);
 	if (!str)
@@ -39,7 +39,7 @@ char *ft_strdup(const char *s1)
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
 	char *str = "Copy me to anyone destiny please!!";
 	char *ori = strdup(str);

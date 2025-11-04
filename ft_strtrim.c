@@ -21,12 +21,12 @@
  * @param s2 The string containing the set of characters to be removed.
  * @return It'll return the trimmed string
  */
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int start;
-	int end;
-	int i;
-	int j;
+	int	start;
+	int	end;
+	int	i;
+	int	j;
 
 	start = 0;
 	end = ft_strlen(s1) - 1;
@@ -49,7 +49,7 @@ char *ft_strtrim(char const *s1, char const *set)
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	char *str = "blablaLets see what this do LOL!!!";
 	char *set = "blaLO!";
