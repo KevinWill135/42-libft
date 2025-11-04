@@ -1,6 +1,10 @@
+# Files
 *.o
 *.a
-.vscode
 main.c
 a.out
 mems
+
+# Dir
+.vscode
+a.out.dSYM
