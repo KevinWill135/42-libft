@@ -6,7 +6,7 @@
 #    By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 21:11:34 by kde-paul          #+#    #+#              #
-#    Updated: 2025/11/01 19:00:58 by kde-paul         ###   ########.fr        #
+#    Updated: 2025/11/04 14:02:49 by kde-paul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 %.o: %.c
-	$(CC) -I. $(CFLAGS) -c $< -o $@
+	@$(CC) -I. $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)

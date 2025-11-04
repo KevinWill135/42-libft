@@ -6,27 +6,27 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:01:09 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 16:54:14 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:34:01 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /**
  * @brief Creates a new modified string
- * 
+ *
  * Applies the function f to each character of the string s.
- * 
+ *
  * @param s The string to iterate over.
  * @param f The function to apply to each character.
  * @return The string created from the successive applications of ’f’.
  * Returns NULL if the allocation fails.
-*/
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+ */
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*str;
-	unsigned int	i;
-	unsigned int	len;
+	char *str;
+	unsigned int i;
+	unsigned int len;
 
 	if (!s || !f)
 		return (NULL);
@@ -43,7 +43,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-/* 
+/*
 #include <stdio.h>
 
 char	ft_hot13(unsigned int i, char c)

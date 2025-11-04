@@ -5,22 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 12:51:38 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 16:52:56 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/29 12:51:38 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 17:21:27 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /**
  * @brief Counts the number of nodes in the list
- * 
+ *
  * @param lst The beginning of the list
  * @return Returns the list size
-*/
-int	ft_lstsize(t_list *lst)
+ */
+int ft_lstsize(t_list *lst)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (lst)
@@ -30,7 +30,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-/* 
+/*
 #include <stdio.h>
 
 int main(void)

@@ -6,13 +6,13 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 17:20:45 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:33:31 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void ft_putstr_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
 }

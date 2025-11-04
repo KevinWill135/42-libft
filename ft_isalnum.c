@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 15:57:15 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 19:31:52 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/22 15:57:15 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 15:36:16 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	ft_isalnum(int c)
+int ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || (c > 96 && c < 123))
 		return (1);

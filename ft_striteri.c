@@ -6,27 +6,27 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 16:51:05 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 16:54:05 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:34:01 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /**
  * @brief Modifies the each string's character
- * 
+ *
  * Applies the function f to each character of the string s.
- * 
+ *
  * @param s The string to iterate over.
  * @param f The function to apply to each character.
  * @return None.
-*/
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+ */
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
+	unsigned int i;
 
 	if (!s || !f)
-		return ;
+		return;
 	i = 0;
 	while (s[i])
 	{
@@ -34,7 +34,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/* 
+/*
 #include <stdio.h>
 
 void	ft_changecase(unsigned int i, char *s)

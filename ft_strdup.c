@@ -6,15 +6,15 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 21:10:55 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/29 21:28:18 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:34:00 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-static char	*ft_strcpy(char *dst, const char *src)
+static char *ft_strcpy(char *dst, const char *src)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (src[i])
@@ -26,16 +26,16 @@ static char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-char	*ft_strdup(const char *s1)
+char *ft_strdup(const char *s1)
 {
-	char	*str;
+	char *str;
 
 	str = malloc(ft_strlen(s1) + 1);
 	if (!str)
 		return (NULL);
 	return (ft_strcpy(str, s1));
 }
-/* 
+/*
 #include <stdio.h>
 #include <string.h>
 

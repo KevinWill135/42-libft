@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 16:33:38 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 16:50:54 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/29 16:33:38 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 17:21:22 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /**
  * @brief Returns a new node
- * 
+ *
  * The ’content’ member variable is initialized with the given parameter ’content’.
  * The variable ’next’ is initialized to NULL.
- * 
+ *
  * @param content The content to store in the new node.
  * @return A pointer to the new node.
-*/
-t_list	*ft_lstnew(void *content)
+ */
+t_list *ft_lstnew(void *content)
 {
-	t_list	*new;
+	t_list *new;
 
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
@@ -32,7 +32,7 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-/* 
+/*
 #include <stdio.h>
 
 int main(void)

@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 18:48:46 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 19:16:47 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/22 18:48:46 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 17:21:53 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void *ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	*pdst;
-	unsigned char	*psrc;
+	size_t i;
+	unsigned char *pdst;
+	unsigned char *psrc;
 
 	i = 0;
 	pdst = (unsigned char *)dst;
@@ -36,7 +36,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return ((void *)pdst);
 }
-/* 
+/*
 #include <stdio.h>
 #include <string.h>
 

@@ -5,20 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 12:53:07 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 16:50:50 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/29 12:53:07 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 17:21:11 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /**
  * @brief Returns the last node of the list.
- * 
+ *
  * @param lst The beginning of the list.
  * @return The last node of the list.
-*/
-t_list	*ft_lstlast(t_list *lst)
+ */
+t_list *ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);

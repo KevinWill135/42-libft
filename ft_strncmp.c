@@ -6,15 +6,15 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:40:15 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:34:01 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
 	if (n > 0)

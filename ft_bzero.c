@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 17:19:16 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/29 21:02:59 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/22 17:19:16 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 14:41:47 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

@@ -6,15 +6,15 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 17:24:32 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/20 21:22:41 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:34:01 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void ft_putnbr_fd(int n, int fd)
 {
-	long	nb;
+	long nb;
 
 	nb = n;
 	if (nb < 0)

@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 15:42:23 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 19:08:04 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/22 15:42:23 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 15:36:29 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int ft_isdigit(int c)
 {
 	if (c > 47 && c < 58)
 		return (1);

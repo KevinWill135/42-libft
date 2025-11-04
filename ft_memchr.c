@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 18:52:57 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/10/29 20:33:48 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/22 18:52:57 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 17:21:34 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	size_t				i;
-	const unsigned char	*b;
+	size_t i;
+	const unsigned char *b;
 
 	i = 0;
 	b = s;
@@ -28,7 +28,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/* 
+/*
 #include <stdio.h>
 #include <string.h>
 

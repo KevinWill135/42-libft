@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 16:03:08 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 19:08:09 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/22 16:03:08 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 15:36:34 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+int ft_isprint(int c)
 {
 	if (c > 31 && c < 127)
 		return (1);

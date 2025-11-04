@@ -6,11 +6,13 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:17:04 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/09/01 16:18:45 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:46:51 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+int ft_tolower(int c)
 {
 	if (c > 64 && c < 91)
 		return (c + 32);

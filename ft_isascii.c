@@ -5,12 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 16:01:01 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/09/01 16:02:51 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/22 16:01:01 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 15:36:24 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+int ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

@@ -6,25 +6,23 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 14:07:27 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 18:58:15 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:44:48 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-/**
- * @brief Splits strings
- * 
- * It'll split a string and return an array with this splitted string
- * str
- * @param str The string to be split.
- * @param c The delimiter character.
- * @return It'll the new array with splitted string.
-*/
-static int	count_words(char const *str, char charset)
+typedef struct s_ints
 {
-	int	i;
-	int	counter;
+	int i;
+	int j;
+	int start;
+} t_ints;
+
+static int count_words(char const *str, char charset)
+{
+	int i;
+	int counter;
 
 	i = 0;
 	counter = 0;
@@ -40,10 +38,10 @@ static int	count_words(char const *str, char charset)
 	return (counter);
 }
 
-static char	*make_str(char const *str, int start, int end)
+static char *make_str(char const *str, int start, int end)
 {
-	int		i;
-	char	*newstr;
+	int i;
+	char *newstr;
 
 	newstr = malloc((end - start) + 1);
 	if (!newstr)
@@ -59,50 +57,58 @@ static char	*make_str(char const *str, int start, int end)
 	return (newstr);
 }
 
-static void	frees_str(char **str)
+static void frees_str(char **str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i])
 		free(str[i++]);
 	free(str);
 }
-
-char	**ft_split(char const *str, char c)
+/**
+ * @brief Splits strings
+ *
+ * It'll split a string and return an array with this splitted string
+ * str
+ * @param str The string to be split.
+ * @param c The delimiter character.
+ * @return It'll the new array with splitted string.
+ */
+char **ft_split(char const *str, char c)
 {
-	char	**arr;
-	int		start;
-	int		i;
-	int		j;
+	char **arr;
+	t_ints counters;
 
+	if (!str)
+		return (NULL);
 	arr = ft_calloc((count_words(str, c) + 1), sizeof(char *));
 	if (!arr)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (str[i])
+	counters.i = 0;
+	counters.j = 0;
+	while (str[counters.i])
 	{
-		while (str[i] && (str[i] == c))
-			i++;
-		start = i;
-		while (str[i] && (str[i] != c))
-			i++;
-		if (i > start)
+		while (str[counters.i] && (str[counters.i] == c))
+			counters.i++;
+		counters.start = counters.i;
+		while (str[counters.i] && (str[counters.i] != c))
+			counters.i++;
+		if (counters.i > counters.start)
 		{
-			arr[j] = make_str(str, start, i);
-			if (!arr[j++])
+			arr[counters.j] = make_str(str, counters.start, counters.i);
+			if (!arr[counters.j++])
 				return (frees_str(arr), NULL);
 		}
 	}
 	return (arr);
 }
-/* 
+
 #include <stdio.h>
 
 int main(void)
 {
-	char const *str = "I need to test this function";
+	char const *str = NULL;
 	char c = ' ';
 	char **arr = ft_split(str, c);
 	int i = 0;
@@ -113,4 +119,5 @@ int main(void)
 		printf("%s\n", arr[i]);
 		free(arr[i++]);
 	}
-} */
+	free(arr);
+}

@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/22 14:22:51 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 16:53:37 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/25 14:22:51 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 15:36:45 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-static int	ft_nbrlen(long nb)
+static int ft_nbrlen(long nb)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	if (nb < 0)
@@ -24,7 +24,7 @@ static int	ft_nbrlen(long nb)
 	}
 	while (nb > 9)
 	{
-		nb = nb / 10;
+		nb /= 10;
 		count++;
 	}
 	count++;
@@ -32,17 +32,17 @@ static int	ft_nbrlen(long nb)
 }
 /**
  * @brief Converts a number in a string.
- * 
+ *
  * It'll convert the number in a string and handle negative numbers.
- * 
+ *
  * @param n The integer to convert.
  * @return This function return the new string.
-*/
-char	*ft_itoa(int n)
+ */
+char *ft_itoa(int n)
 {
-	char	*str;
-	long	nb;
-	int		len;
+	char *str;
+	long nb;
+	int len;
 
 	nb = n;
 	len = ft_nbrlen(nb);
@@ -64,16 +64,16 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/* 
+/*
 #include <stdio.h>
 #include <limits.h>
 
 int main(void)
 {
-	long n = LONG_MAX;
+	long n = INT_MAX;
 	char *str = ft_itoa(n);
 
 	printf("test: %s\n", str);
 
 	free(str);
-} */
+}*/

@@ -6,11 +6,13 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:10:04 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/09/01 16:19:12 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:46:56 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+int ft_toupper(int c)
 {
 	if (c > 96 && c < 123)
 		return (c - 32);

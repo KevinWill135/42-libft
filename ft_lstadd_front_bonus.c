@@ -5,28 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 16:49:45 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/01 16:48:42 by kde-paul         ###   ########.fr       */
+/*   Created: 2025/10/29 16:49:45 by kde-paul          #+#    #+#             */
+/*   Updated: 2025/11/04 17:20:50 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /**
  * @brief Adds a node in a list
- * 
+ *
  * Adds the node ’new’ at the beginning of the list.
- * 
+ *
  * @param lst The address of a pointer to the first node of a list.
  * @param new The address of a pointer to the node to be added.
  * @return none
-*/
-void	ft_lstadd_front(t_list **lst, t_list *new)
+ */
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;
 }
-/* 
+/*
 #include <stdio.h>
 
 int main(void)
