@@ -8,3 +8,4 @@ mems
 # Dir
 .vscode
 a.out.dSYM
+.bonus_done

@@ -6,20 +6,20 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:11:03 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:21:59 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/05 20:32:09 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t			i;
 	unsigned char	*s;
 
 	i = 0;
 	s = b;
-	while (i < n)
+	while (i < len)
 	{
 		s[i] = (unsigned char)c;
 		i++;

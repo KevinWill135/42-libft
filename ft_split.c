@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 14:07:27 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 19:44:58 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/05 20:15:44 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char	*make_str(char const *str, int start, int end)
 	return (newstr);
 }
 
-static void	frees_str(char **str)
+static void	*frees_str(char **str)
 {
 	int	i;
 
@@ -58,6 +58,7 @@ static void	frees_str(char **str)
 	while (str[i])
 		free(str[i++]);
 	free(str);
+	return (NULL);
 }
 
 /**
@@ -92,7 +93,7 @@ char	**ft_split(char const *str, char c)
 		{
 			arr[counters.j] = make_str(str, counters.start, counters.i);
 			if (!arr[counters.j++])
-				return (frees_str(arr), NULL);
+				return (frees_str(arr));
 		}
 	}
 	return (arr);
@@ -112,10 +113,15 @@ int	main(void)
 	arr = ft_split(str, c);
 	i = 0;
 	printf("\nTESTING\n\n");
-	while (arr[i])
+	if (!arr)
+		printf("ARR is (NULL)");
+	else
 	{
-		printf("%s\n", arr[i]);
-		free(arr[i++]);
+		while (arr[i])
+		{
+			printf("%s\n", arr[i]);
+			free(arr[i++]);
+		}
 	}
 	free(arr);
 }

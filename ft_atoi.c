@@ -6,18 +6,19 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:15:55 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 19:13:33 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:03:17 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** @brief
- * Convert the string's number in real number
- * @param str
- * String that needs to be converted
- * @return
- * The number that was converted
+/** @brief Converts the initial portion of the string
+ * 
+ * Converts the initial portion of the string, but
+ * this function don't handle errors.
+ * 
+ * @param str String that needs to be converted
+ * @return The number that was converted
  */
 int	ft_atoi(const char *str)
 {
