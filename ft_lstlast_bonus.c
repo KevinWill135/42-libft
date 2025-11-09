@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 12:53:07 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 19:14:55 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/09 14:29:26 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@
  */
 t_list	*ft_lstlast(t_list *lst)
 {
+	t_list	*tmp;
+
+	tmp = lst;
 	if (!lst)
 		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	while (tmp->next)
+		tmp = tmp->next;
+	return (tmp);
 }
 /*
 #include <stdio.h>

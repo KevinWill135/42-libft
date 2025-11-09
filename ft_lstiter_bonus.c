@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:16:34 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 19:43:56 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/09 14:30:42 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@
  */
 void	ft_lstiter(t_list *lst, void (f)(void *))
 {
-	while (lst)
+	t_list	*tmp;
+
+	tmp = lst;
+	while (tmp)
 	{
-		f(lst->content);
-		lst = lst->next;
+		f(&tmp->content);
+		tmp = tmp->next;
 	}
 }
