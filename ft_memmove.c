@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:48:46 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 17:21:53 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/09 13:00:55 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
+	if (!dst && !src)
+		return (NULL);
 	if (dst < src)
 	{
 		while (i < len)

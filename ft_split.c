@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 14:07:27 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/05 20:15:44 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/09 12:34:15 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ static void	*frees_str(char **str)
  *
  * It'll split a string and return an array with this splitted string
  * str
+ * 
  * @param str The string to be split.
  * @param c The delimiter character.
  * @return It'll the new array with splitted string.

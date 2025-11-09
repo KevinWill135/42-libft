@@ -6,7 +6,7 @@
 /*   By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:57:15 by kde-paul          #+#    #+#             */
-/*   Updated: 2025/11/04 19:13:51 by kde-paul         ###   ########.fr       */
+/*   Updated: 2025/11/09 12:58:30 by kde-paul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || (c > 96 && c < 123))
+	if (ft_isalpha(c) || (c > 47 && c < 58))
 		return (1);
 	return (0);
 }
