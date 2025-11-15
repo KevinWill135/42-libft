@@ -6,7 +6,7 @@
 #    By: kde-paul <kde-paul@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 21:11:34 by kde-paul          #+#    #+#              #
-#    Updated: 2025/11/04 20:59:19 by kde-paul         ###   ########.fr        #
+#    Updated: 2025/11/15 19:58:13 by kde-paul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,12 @@ ft_memcpy.c ft_memcmp.c ft_memmove.c ft_strnstr.c ft_strlcpy.c ft_strlcat.c ft_a
 PART2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+PART3 = ft_printf.c ft_putnbr_base.c ft_putptr_base.c ft_count_nb_len.c
+
 BONUS_PART = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-SRC = $(PART1) $(PART2)
+SRC = $(PART1) $(PART2) $(PART3)
 
 OBJS = $(SRC:.c=.o)
 BONUS_OBJS = $(BONUS_PART:.c=.o)
@@ -37,14 +39,13 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar rcs $@ $^
+	@echo "Done, now u can use me LoL"
 
-bonus: $(BONUS_DONE)
-
-$(BONUS_DONE): $(BONUS_OBJS)
-	touch $(BONUS_DONE)
+bonus: $(BONUS_OBJS)
 	@ar rcs $(NAME) $^
 
 %.o: %.c
+	@echo "Compiling....."
 	@$(CC) -I. $(CFLAGS) -c $< -o $@
 
 clean:
